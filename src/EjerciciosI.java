@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class EjerciciosI {
 
     //  20 Ejercicios de Java: Operaciones, Condicionales y Bucles
@@ -5,8 +7,41 @@ public class EjerciciosI {
 
         // 1. Suma de dos números. Pide al usuario dos números enteros y muestra la suma en pantalla.
 
+        Scanner sc = new Scanner(System.in);
+
+        // Pedir los números
+        System.out.print("Ingresa el primer número: ");
+        int num1 = sc.nextInt();
+
+        System.out.print("Ingresa el segundo número: ");
+        int num2 = sc.nextInt();
+
+        // Calcular la suma
+        int suma = num1 + num2;
+
+        // Mostrar el resultado
+        System.out.println("La suma es: " + suma);
+
+        sc.close();
 
         // 2. Área de un rectángulo Solicita la base y la altura de un rectángulo y calcula su área.
+
+        Scanner sc = new Scanner(System.in);
+
+        // Pedir la base y la altura
+        System.out.print("Ingresa la base del rectángulo: ");
+        double base = sc.nextDouble();
+
+        System.out.print("Ingresa la altura del rectángulo: ");
+        double altura = sc.nextDouble();
+
+        // Calcular el área
+        double area = base * altura;
+
+        // Mostrar resultado
+        System.out.println("El área del rectángulo es: " + area);
+
+        sc.close();
 
 
         // 3. Conversión de grados Celsius a Fahrenheit Pide la temperatura en Celsius y conviértela a Fahrenheit.
