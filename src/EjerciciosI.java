@@ -6,7 +6,7 @@ public class EjerciciosI {
     public static void main(String[] args) {
 
         // *******
-        System.out.print(" 1. Suma de dos números. Pide al usuario dos números enteros y muestra la sumaIn en pantalla.\n");
+        System.out.print(" 1. Suma de dos números. Pide al usuario dos números enteros y muestra la suma en pantalla.\n");
         // *******
 
         Scanner sc = new Scanner(System.in);
@@ -22,7 +22,7 @@ public class EjerciciosI {
         int suma = num1 + num2;
 
         // Mostrar el resultado
-        System.out.println("La sumaIn es: " + suma);
+        System.out.println("La suma es: " + suma);
 
         // *******
         System.out.print(" 2. Área de un rectángulo Solicita la base y la altura de un rectángulo y calcula su área.\n");
@@ -164,7 +164,7 @@ public class EjerciciosI {
         // Determinar si el año es bisiesto
         boolean esBisiesto = false;
 
-        if (anio % 4 == 0) {
+        if(anio % 4 == 0){
             esBisiesto = true;
         }
 
@@ -175,34 +175,107 @@ public class EjerciciosI {
             System.out.println(anio + " no es un año bisiesto.");
         }
 
+        // *******
         // 11. Nota aprobada o suspendida Pide una nota (0–10) y muestra si es "Aprobado" (≥5) o "Suspenso".
+        // *******
 
+        // Pedir nota
+        System.out.print("Ingresa una nota (0 - 10): ");
+        int nota = sc.nextInt();
 
+        // Validación básica
+        if (nota < 0 || nota > 10) {
+            System.out.println("❌ Nota inválida. Debe estar entre 0 y 10.");
+        } else if (nota >= 5) {
+            System.out.println("✅ Aprobado");
+        } else {
+            System.out.println("❌ Suspenso");
+        }
+
+        // *******
         // 12. Menú de operaciones matemáticas Muestra un menú con 4 opciones: sumaIn, resta, multiplicación, división. El usuario elige una y se realiza con dos números dados.
+        // *******
 
+        // Mostrar menú
+        System.out.println("1. Suma");
+        System.out.println("2. Resta");
+        System.out.println("3. Multiplicación");
+        System.out.println("4. División");
+        System.out.print("Elige una opción (1-4): ");
+        int opcion = sc.nextInt();
 
+        // Pedir números
+        System.out.print("Ingresa el primer número: ");
+        double dob1 = sc.nextDouble();
+
+        System.out.print("Ingresa el segundo número: ");
+        double dob2 = sc.nextDouble();
+
+        // Operaciones según la opción
+        switch (opcion) {
+            case 1:
+                System.out.println("Resultado de la suma: " + (dob1 + dob2));
+                break;
+            case 2:
+                System.out.println("Resultado de la resta: " + (dob1 - dob2));
+                break;
+            case 3:
+                System.out.println("Resultado de la multiplicación: " + (dob1 * dob2));
+                break;
+            case 4:
+                if (dob2 != 0) {
+                    System.out.println("Resultado de la división: " + (dob1 / dob2));
+                } else {
+                    System.out.println("❌ Error: No se puede dividir entre 0.");
+                }
+                break;
+            default:
+                System.out.println("❌ Opción no válida.");
+        }
+
+        // *******
         // 13. Contar del 1 al 10 Muestra en pantalla los números del 1 al 10 usando un bucle for.
+        // *******
 
+        for (int i = 0; i < 10; i++) {
 
+            System.out.println(i);
+
+        }
+
+        // *******
         // 14. Tabla de multiplicar Pide un número y muestra su tabla de multiplicar del 1 al 10.
+        // *******
 
 
+        // *******
         // 15. Suma de los primeros N números Pide un número N y calcula la sumaIn desde 1 hasta N.
+        // *******
 
 
+        // *******
         // 16. Factorial de un número Pide un número y calcula su factorial (ej: 5! = 5×4×3×2×1).
+        // *******
 
 
+        // *******
         // 17. Contar pares e impares Pide un número N y muestra cuántos números pares e impares hay entre 1 y N.
+        // *******
 
 
+        // *******
         // 18. Adivinar el número Genera un número aleatorio entre 1 y 100. El usuario debe adivinarlo. El programa da pistas: "mayor" o "menor".
+        // *******
 
 
+        // *******
         // 19. Serie de Fibonacci Pide un número N y muestra los primeros N números de la serie de Fibonacci.
+        // *******
 
 
+        // *******
         // 20. Menú repetitivo con bucle Crea un menú con opciones (ej: sumar, restar, salir). El programa se repite hasta que el usuario elija “Salir”.
+        // *******
 
 
     }
