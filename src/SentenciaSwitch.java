@@ -1,4 +1,3 @@
-import java.lang.classfile.instruction.SwitchCase;
 import java.util.Scanner;
 
 public class SentenciaSwitch {
@@ -9,7 +8,7 @@ public class SentenciaSwitch {
         System.out.println("Introduce el número del mes: ");
         int mes = sc.nextInt();
 
-        String nombreMes = "";
+        String nombreMes;
 
         switch (mes) {
             case 1:
