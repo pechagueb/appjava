@@ -1,5 +1,6 @@
 public class PrimitivosEnteros {
 
+
     byte numeroByte = 127;
     short numeroShort = 127;
     int numeroInt = 256;
